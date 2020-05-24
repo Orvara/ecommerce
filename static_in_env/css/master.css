@@ -1,3 +1,8 @@
-h2{
-  background-color: blue;
+
+.top-buffer {
+  margin-top: 20%;
+}
+
+body {
+    /* padding-top: 65px; */
 }

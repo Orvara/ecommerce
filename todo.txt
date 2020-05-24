@@ -1,0 +1,2 @@
+make redirect if you add to cart not go to order-summary
+only if you click on quantity in order-summary to redirect to order-order_summary

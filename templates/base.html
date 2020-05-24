@@ -6,14 +6,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Home</title>
-  <!--<title>{% block head_title %}{% endblock %}</title>
-  {% block extra_head %}
-  {% endblock %} -->
+  <head>
+    <title>{% block head_title %}{% endblock %}</title>
+    {% block extra_head %}
+    {% endblock %}
+  </head>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
   <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
   <link href="{% static 'css/mdb.min.css' %}" rel="stylesheet">
   <link href="{% static 'css/style.min.css' %}" rel="stylesheet">
+  <link href="{% static 'css/master.css' %}" rel="stylesheet">
   <style type="text/css">
     html,
     body,
@@ -42,8 +44,8 @@
       }
     }
 </style>
-{% include "navbar.html" %}
 </head>
+{% include "navbar.html" %}
 <body>
   <div class="mt-1 pt-2">
     {% if messages %}
@@ -59,11 +61,16 @@
   </div>
 
 
-  {% block content  %}
+  {% block content %}
   {% endblock content %}
+
+  {% block extra_body %}
+  {% endblock %}
 
   {% include "footer.html" %}
   {% include "scripts.html" %}
-</body>
 
+  {% block extra_scripts %}
+  {% endblock extra_scripts %}
+</body>
 </html>
